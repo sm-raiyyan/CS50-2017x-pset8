@@ -2,7 +2,7 @@ import feedparser
 import urllib.parse
 
 def lookup(geo):
-    #Looking for articles for geo
+    # looking for articles for geo
 
     # check cache for geo
     if geo in lookup.cache:
