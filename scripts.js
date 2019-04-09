@@ -31,7 +31,6 @@ $(function() {
                 {visibility: "off"}
             ]
         }
-
     ];
 
     // options for map
@@ -55,12 +54,9 @@ $(function() {
 
     // configure UI once Google Map is idle (i.e., loaded)
     google.maps.event.addListenerOnce(map, "idle", configure);
-
 });
 
-/**
- * Adds marker for place to map.
- */
+// Adds marker for place to map.
 function addMarker(place)
 {   
     // extract the place latitude and longitude
@@ -107,9 +103,7 @@ function addMarker(place)
     markers.push(marker);
 }
 
-/**
- * Configures application.
- */
+// Configures application.
 function configure()
 {
     // update UI after map has been dragged
@@ -176,9 +170,7 @@ function configure()
     $("#q").focus();
 }
 
-/**
- * Removes markers from map.
- */
+// Removes markers from map.
 function removeMarkers()
 {
     // remove all markers from the map
@@ -188,9 +180,7 @@ function removeMarkers()
     }
 }
 
-/**
- * Searches database for typeahead's suggestions.
- */
+// Searches database for typeahead's suggestions.
 function search(query, syncResults, asyncResults)
 {
     // get places matching query (asynchronously)
@@ -213,9 +203,7 @@ function search(query, syncResults, asyncResults)
     });
 }
 
-/**
- * Shows info window at marker with content.
- */
+// Shows info window at marker with content.
 function showInfo(marker, content)
 {
     // start div
@@ -240,9 +228,7 @@ function showInfo(marker, content)
     info.open(map, marker);
 }
 
-/**
- * Updates UI's markers.
- */
+// Updates UI's markers.
 function update() 
 {
     // get map's bounds
