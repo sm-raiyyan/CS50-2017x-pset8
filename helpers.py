@@ -2,7 +2,7 @@ import feedparser
 import urllib.parse
 
 def lookup(geo):
-    """Looks up articles for geo."""
+    #Looking for articles for geo
 
     # check cache for geo
     if geo in lookup.cache:
