@@ -6,7 +6,7 @@ from flask_jsglue import JSGlue
 from cs50 import SQL
 from helpers import lookup
 
-# configure application
+# configuring the application
 app = Flask(__name__)
 JSGlue(app)
 
@@ -31,7 +31,7 @@ def index():
 
 @app.route("/articles")
 def articles():
-    """Look up articles for geo."""
+    # looking for articles for given geo
     
     # retrieve geo argument from HTML form
     geo = request.args.get("geo")
@@ -68,7 +68,7 @@ def search():
 
 @app.route("/update")
 def update():
-    """Find up to 10 places within view."""
+    # finding upto 10 places within view
 
     # ensure parameters are present
     if not request.args.get("sw"):
